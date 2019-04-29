@@ -18,5 +18,6 @@ steps:
   - name: dotnet-build
     image: docker
     commands:
-      - docker run --rm mcr.microsoft.com/dotnet/core/samples
+      - docker run --privileged --name some-docker -d docker:dind
+      - docker run --rm --link some-docker:docker mcr.microsoft.com/dotnet/core/samples
 
