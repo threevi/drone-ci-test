@@ -1,0 +1,14 @@
+kind: pipeline
+name: default
+
+steps:
+  - name: greet
+    image: golang:1.10.7-alpine3.8
+    commands:
+      - echo "-- Drone command"
+
+  - name: build
+    image: golang:1.10.7-alpine3.8
+    commands:
+      - echo "-- Build the dang thing"
+
