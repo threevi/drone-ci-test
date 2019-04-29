@@ -6,9 +6,11 @@ steps:
     image: golang:1.10.7-alpine3.8
     commands:
       - echo "-- Drone command"
+      - go version 
 
   - name: build
     image: golang:1.10.7-alpine3.8
     commands:
       - echo "-- Build the dang thing"
+      - go version
 
