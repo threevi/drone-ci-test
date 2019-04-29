@@ -16,8 +16,8 @@ steps:
       - go run main.go
 
   - name: dotnet-build
-    image: docker
-    commands:
-      - docker run --privileged --name some-docker -d docker:dind
-      - docker run --rm --link some-docker:docker mcr.microsoft.com/dotnet/core/samples
+    image: plugins/docker
+    settings:
+      repo: mcr.microsoft.com/dotnet/core/samples
+      dry_run: true
 
