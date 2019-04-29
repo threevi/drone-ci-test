@@ -15,3 +15,8 @@ steps:
       - go version
       - go run main.go
 
+  - name: dotnet-build
+    image: docker
+    commands:
+      - docker run --rm mcr.microsoft.com/dotnet/core/samples
+
