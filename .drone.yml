@@ -13,4 +13,5 @@ steps:
     commands:
       - echo "-- Build the dang thing"
       - go version
+      - go run main.go
 
