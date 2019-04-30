@@ -16,8 +16,8 @@ steps:
       - go run main.go
 
   - name: dotnet-build
-    image: plugins/docker
-    settings:
-      repo: mcr.microsoft.com/dotnet/core/samples
-      dry_run: true
+    image: mcr.microsoft.com/dotnet/core/runtime:2.2
+    commands:
+      - dotnet version
+      - dotnet run
 
